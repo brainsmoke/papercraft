@@ -739,7 +739,7 @@ int main(void)
 	// all of the faces and their sizes. start trying to build
 	// non-overlapping groups of them
 	
-	printf("<svg xmlns=\"http://www.w3.org/2000/svg\">\n");
+	printf("<svg width=\"1mm\" height=\"1mm\" viewBox=\"0 0 1 1\" xmlns=\"http://www.w3.org/2000/svg\">\n");
 	poly_t origin = { };
 
 	float last_x = 0;
