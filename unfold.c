@@ -402,7 +402,9 @@ poly_build(
 	{
 		const int edge = (i + start_edge) % 3;
 		face_t * const f2 = f->next[edge];
-		assert(f2 != NULL);
+		if (f2 == NULL)
+			continue;
+		//assert(f2 != NULL);
 		if (f2->used)
 			continue;
 		if (pass == 0 && f->coplanar[edge] == 0)
@@ -704,8 +706,11 @@ stl2faces(
 		if (f->next[0] && f->next[1] && f->next[2])
 			continue;
 		fprintf(stderr, "%d missing edges?\n", i);
+// allow incomplete stl files
+/*
 		free(faces);
 		return NULL;
+*/
 	}
 
 	return faces;
