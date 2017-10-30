@@ -109,7 +109,7 @@ svg_line(
 {
 	if (!dash)
 	{
-		printf("<line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"%s\" stroke-width=\"0.1px\"/>\n",
+		printf("<line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" stroke=\"%s\" stroke-width=\"0.1mm\"/>\n",
 			p1[0],
 			p1[1],
 			p2[0],
